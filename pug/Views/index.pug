@@ -1,0 +1,36 @@
+html 
+  head 
+    title hello Pug 
+  body 
+  include menu
+    //- =name
+    //- h3=name
+    //- | Name =name
+    //- | Name #{name}
+    h1 hello pug in h1 tag 
+    | Subtitle Message..
+    -var jobTitle="Engineer"
+    -var jobDesc='Reginal'
+    -var city='Van'
+    hr
+    =jobTitle.toUpperCase() 
+    br
+    =jobDesc
+    p P tag messages city: #{city.toLowerCase()}
+    -var number=101;
+    if !number  
+      | number variable does not exist 
+    else if number ===10
+      | number is 10
+    else 
+      | number is not 10
+    hr
+    span(style='color:white;background-color:red;')
+      | Pug is here 
+    hr
+    ul
+      each val in [1, 2, 3, 4, 5]
+          li= val
+    hr
+    | Hello Pug in new line 
+    include footer.pug
